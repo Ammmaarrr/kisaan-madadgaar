@@ -11,7 +11,7 @@ import pandas as pd
 disease_info = pd.read_csv('disease_info.csv' , encoding='cp1252')
 supplement_info = pd.read_csv('supplement_info.csv',encoding='cp1252')
 
-model = CNN.CNN(39)    
+model = CNN.CNN(34)    # Updated for Pakistan dataset (34 classes)
 model.load_state_dict(torch.load("plant_disease_model_1_latest.pt"))
 model.eval()
 
